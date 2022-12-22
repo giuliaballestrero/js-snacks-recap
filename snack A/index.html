@@ -29,15 +29,12 @@
         </header>
 
         <main>
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 m-auto rounded">
+                    <div class="col-6 m-auto">
                         <div class="chat-wrapper bg-light shadow rounded mb-2">
-                            <div class="user-text" v-for="message in userMessages">
-                                {{message}}
-                            </div>
-                            <div class="pc-text" v-for="message in pcMessages">
-                                {{message}}
+                            <div v-for="message in messageList" class="pt-4">
+                                <p :class="(message.status === 'received') ? 'pc-text' : 'user-text'">{{message.message}}</p>
                             </div>
                         </div>
                         <div>

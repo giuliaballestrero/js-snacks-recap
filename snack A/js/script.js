@@ -5,8 +5,7 @@ createApp ( {
         
         return {
             myText: '',
-            userMessages: [],
-            pcMessages: [],
+            messageList: [],
         }
 
         
@@ -18,14 +17,14 @@ createApp ( {
             .then((response) => {
                 console.log(response.data);
                 const pcText = response.data.response;
-                this.pcMessages.push(pcText)
-                console.log(this.pcMessages)
+                this.messageList.push({message:pcText, status: 'received'})
+                console.log(this.messageList)
             })
         },
 
         getNewMessage (myText) {
-            this.userMessages.push(myText)
-            console.log(this.userMessages);
+            this.messageList.push({message:myText, status: 'sent'})
+            console.log(this.messageList);
             this.pcReply();
         },
 
