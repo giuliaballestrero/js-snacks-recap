@@ -1,0 +1,29 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background-image: radial-gradient( circle 759px at -6.7% 50%,  rgba(80,131,73,1) 0%, rgba(140,209,131,1) 26.2%, rgba(178,231,170,1) 50.6%, rgba(144,213,135,1) 74.1%, rgba(75,118,69,1) 100.3% );
+}   
+
+.chat-wrapper {
+    width: 700px;
+    height: 500px;
+}
+
+.user-text,
+.pc-text {
+    padding: .5rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+.user-text {
+    background-color: rgb(126, 236, 126);
+    margin-left: 20rem;
+    margin-right: 2rem;
+}
+
+.pc-text {
+    background-color: rgb(100, 223, 240);
+    margin-right: 20rem;
+    margin-left: 2rem;
+}
