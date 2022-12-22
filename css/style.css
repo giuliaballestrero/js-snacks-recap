@@ -1,0 +1,13 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+}   
+
+
+.even-text {
+    color: green;
+}
+
+.odd-text {
+    color: red;
+}
