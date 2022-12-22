@@ -22,9 +22,9 @@ createApp ( {
                 console.log(response.data);
                 this.randomNumber = response.data.response;
                 if (this.randomNumber % 2) {
-                    this.evenNumberList.push(this.randomNumber);
-                } else {
                     this.oddNumberList.push(this.randomNumber);
+                } else {
+                    this.evenNumberList.push(this.randomNumber);
                 }
                 
             })
