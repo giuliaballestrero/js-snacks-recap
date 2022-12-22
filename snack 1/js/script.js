@@ -4,7 +4,6 @@ createApp ( {
     data() {
         
         return {
-            randomNumber : null,
             oddNumberList: [],
             evenNumberList: [],
         }
@@ -13,21 +12,22 @@ createApp ( {
     },
 
     methods: {
-        
-    },
-
-    mounted(){
-        axios.get('https://flynn.boolean.careers/exercises/api/random/int')
+        getRandomNumbers () {
+            axios.get('https://flynn.boolean.careers/exercises/api/random/int')
             .then((response) => {
                 console.log(response.data);
-                this.randomNumber = response.data.response;
-                if (this.randomNumber % 2) {
-                    this.oddNumberList.push(this.randomNumber);
+                const number = response.data.response;
+                if (number % 2 === 0) {
+                    this.evenNumberList.push(number);
                 } else {
-                    this.evenNumberList.push(this.randomNumber);
+                    this.oddNumberList.push(number);
                 }
                 
             })
+        }
+    },
+
+    mounted(){
             
     },
 

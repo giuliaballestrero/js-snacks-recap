@@ -24,20 +24,41 @@
     <div  id="app">
         <header class="p-5 text-center container-fluid">
             <h1 class="bg-dark text-light shadow rounded"> 
-                Snack!
+                Snack 1 - API Random Number
             </h1>
         </header>
 
         <main>
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-4 col-md-8 col-sm-12 m-auto rounded">
-                        <div class="p-2 even-text">
-                            {{evenNumberList}}
+                    <div class="col-12 justify-content-center">
+
+                        <div class="text-center">
+                            <a href="#" class="btn btn-primary" @click="getRandomNumbers">
+                                Get New Number!
+                            </a>
                         </div>
-                        <div class="p-2 odd-text">
-                            {{oddNumberList}}
+
+                        <div class="wrapper d-flex justify-content-center">
+                            <div class="text-danger fw-bold p-4">
+                                <h2 class="text-decoration-underline">Odd Numbers</h2>
+                                <ul class="py-2">
+                                    <li v-for="number in oddNumberList">
+                                        {{number}}
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="text-success fw-bold p-4">
+                                <h2 class="text-decoration-underline">Even Numbers</h2>
+                                <ul class="py-2">
+                                    <li v-for="number in evenNumberList">
+                                        {{number}}
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
